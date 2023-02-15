@@ -1,0 +1,32 @@
+<h1>Hello from Angular project: {{ title }}</h1>
+<ul>
+  <li *ngFor="let num of numbers">
+    {{num}}
+  </li>
+</ul>
+<h2 *ngIf="isOK">{{message}}</h2>
+<button (click)="toggleMessage()" >Toggle message</button>
+
+<ul>
+  <li *ngFor="let user of users">
+    {{user.name}} - {{user.age}}
+  </li>
+</ul>
+
+<fieldset>
+  <label>Your task: </label>
+  <input type="text" [(ngModel)]="display">
+  <button (click)="addItem()">Add item</button>
+</fieldset>
+<ul>
+  <li *ngFor="let item of items; let i = index;">
+    <p>
+      {{i + 1}}) {{item}}
+      <button (click)="removeItem(i)">remove</button>
+    </p>
+  </li>
+</ul>
+
+
+
+<router-outlet></router-outlet>
