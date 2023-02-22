@@ -1,0 +1,6 @@
+<!--      <span class="done_task">{{task.id}}) {{task.title}}</span>-->
+<!--      <span [ngClass]="task.isDone ? 'done_task' : ''">{{task.id}}) {{task.title}}</span>-->
+<span [class.done_task]="task.isDone">{{task.id}}) {{task.title}}</span>
+<input type="checkbox"
+       [(ngModel)]="task.isDone"> Done?
+<button (click)="removeTask()">remove</button>
