@@ -1,0 +1,9 @@
+<div *ngIf="loaded">
+  <h1>Post detail #{{post.id}}</h1>
+
+  <h2>{{post.title}}</h2>
+
+  <p>{{post.body}}</p>
+</div>
+
+<h3 *ngIf="!loaded">Post is loading...</h3>
